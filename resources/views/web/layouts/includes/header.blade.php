@@ -5,7 +5,7 @@
                 <i class="fa-solid fa-bars"></i>
             </div>
             <a href="{{ route('web.index') }}" class="logo text-decoration-none">
-                <i class="fa-solid fa-book-bookmark ms-1"></i>
+                {{-- <i class="fa-solid fa-book-bookmark ms-1"></i> --}}
                 منصة الفاتح التعليمية
             </a>
             <ul>
@@ -31,7 +31,7 @@
                 <i class="fa-solid fa-bars"></i>
             </div>
             <a href="{{ route('web.index') }}" class="logo text-decoration-none">
-                <i class="fa-solid fa-book-bookmark ms-1"></i>
+                {{-- <i class="fa-solid fa-book-bookmark ms-1"></i> --}}
                 منصة الفاتح التعليمية
             </a>
             <ul>

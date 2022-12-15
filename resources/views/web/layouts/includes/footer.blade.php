@@ -6,12 +6,19 @@
                 <div class="footer_box_content">
                     <h3 class="text-center">منصة الفاتح التعليمية</h3>
                     <p class="notes text-center">
-                        تعليم مُتميز عالي الجودة بِكوادر تعليمية مُؤهلة لِبناء مُواطن مُعتزّ بِقيمه الوطنية ومُنافس عالمياً.
+                        تعليم مُتميز عالي الجودة بِكوادر تعليمية مُؤهلة لِبناء مُواطن مُعتزّ بِقيمه الوطنية ومُنافس
+                        عالمياً.
                     </p>
                     <div class="connection_icon d-flex justify-content-center align-items-center">
-                        <div><p class="zoom">Zoom</p></div>
-                        <div><p><i class="fa-brands fa-google"></i></p></div>
-                        <div><p><i class="fa-brands fa-microsoft"></i></p></div>
+                        <div>
+                            <p class="zoom">Zoom</p>
+                        </div>
+                        <div>
+                            <p><i class="fa-brands fa-google"></i></p>
+                        </div>
+                        <div>
+                            <p><i class="fa-brands fa-microsoft"></i></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -22,11 +29,21 @@
                         كن على تواصل دائم.
                     </p>
                     <div class="connection_icon d-flex justify-content-center align-items-center mb-3">
-                        <div><p><i class="fa-brands fa-facebook-f"></i></p></div>
-                        <div><p><i class="fa-brands fa-twitter"></i></p></div>
-                        <div><p><i class="fa-brands fa-whatsapp"></i></p></div>
-                        <div><p><i class="fa-brands fa-telegram"></i></p></div>
-                        <div><p><i class="fa-brands fa-instagram"></i></p></div>
+                        <div>
+                            <p><i class="fa-brands fa-facebook-f"></i></p>
+                        </div>
+                        <div>
+                            <p><i class="fa-brands fa-twitter"></i></p>
+                        </div>
+                        <div>
+                            <p><i class="fa-brands fa-whatsapp"></i></p>
+                        </div>
+                        <div>
+                            <p><i class="fa-brands fa-telegram"></i></p>
+                        </div>
+                        <div>
+                            <p><i class="fa-brands fa-instagram"></i></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -43,7 +60,8 @@
             class="text-decoration-none" target="blank">Ahmed Abdelwahab</a>
         </p> --}}
         <p class="text-center">
-            جميع الحقوق محفوظة &copy; <a href="https://api.whatsapp.com/send?phone={{ $generalSetting->tel1 }}"
+            جميع الحقوق محفوظة &copy; <a
+                href="https://api.whatsapp.com/send?phone=@isset($generalSetting->tel1) {{ $generalSetting->tel1 }} @endisset"
                 class="text-decoration-none" target="blank">Ai
                 Education</a>
         </p>

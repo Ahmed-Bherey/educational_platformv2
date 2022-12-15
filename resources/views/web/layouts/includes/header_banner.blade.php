@@ -7,14 +7,17 @@
             <a href="{{ route('register.form') }}" class="register">اشترك الان</a>
         </div>
         <div class="pages">
-            <a href="{{ $generalSetting->twitter }}"><i class="fa-brands fa-twitter"></i></a>
-            <a href="mailto:{{ $generalSetting->email }}"><i class="fa-regular fa-envelope"></i></i></a>
-            <a href="{{ $generalSetting->facebook }}"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="@isset($generalSetting->twitter){{ $generalSetting->twitter }}@endisset"><i
+                    class="fa-brands fa-twitter"></i></a>
+            <a href="mailto:@isset($generalSetting->email){{ $generalSetting->email }}@endisset"><i
+                    class="fa-regular fa-envelope"></i></i></a>
+            <a href="@isset($generalSetting->facebook){{ $generalSetting->facebook }}@endisset"><i
+                    class="fa-brands fa-facebook-f"></i></a>
         </div>
     </div>
 </div>
 <div class="col-lg-4 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="300">
-    <img src="{{asset('public/web/img/hero-img.png')}}" class="img-fluid animated" alt="">
+    <img src="{{ asset('public/web/img/hero-img.png') }}" class="img-fluid animated" alt="">
 </div>
 <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
     viewBox="0 24 150 28 " preserveAspectRatio="none">

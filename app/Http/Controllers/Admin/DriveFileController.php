@@ -22,7 +22,9 @@ class DriveFileController extends Controller
     {
         $file = null;
         if (isset($request->file)) {
-            $file = $request->file->store('public/img/driveFiles');
+            $filePrepare = $request->file("file");
+            $file = time() . "_" . $filePrepare->getClientOriginalName();
+            $filePrepare->move('uploads/file', $file);
         }
 
         DriveFile::create([
@@ -49,7 +51,9 @@ class DriveFileController extends Controller
         $driveFile = DriveFile::findOrFail($id);
         $file = $driveFile->file;
         if (isset($request->file)) {
-            $file = $request->file->store('public/img/driveFiles');
+            $filePrepare = $request->file("file");
+            $file = time() . "_" . $filePrepare->getClientOriginalName();
+            $filePrepare->move('uploads/file', $file);
         }
         $driveFile->update([
             'user_id' => Auth::user()->id,

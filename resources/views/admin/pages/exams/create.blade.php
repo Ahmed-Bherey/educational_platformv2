@@ -130,7 +130,7 @@
                                                             <td>{{ $exam->subjects->name }}</td>
                                                             <td>{{ $exam->name }}</td>
                                                             <td>
-                                                                <img src="{{ asset('/public/' . Storage::url($exam->img)) }}"
+                                                                <img src="{{ asset('/uploads/img/' . $exam->img) }}"
                                                                     id="imgshow" height="50vh">
                                                             </td>
                                                             <td>

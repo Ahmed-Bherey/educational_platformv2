@@ -20,7 +20,7 @@
                                     class="col-12 col-md-6 col-lg-4 col-xl-3 driveFile_box mb-3 d-flex justify-content-center">
                                     <div class="driveFile_content text-center">
                                         <div class="driveFile_img">
-                                            <img src="{{ asset('/public/' . Storage::url($bookDriveFile->img)) }}"
+                                            <img src="{{ asset('/uploads/img/' . $bookDriveFile->img) }}"
                                                 alt="">
                                         </div>
                                         <div class="driveFile_info">

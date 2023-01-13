@@ -31,7 +31,9 @@ class MemberController extends Controller
         }
         $img = $member->img;
         if(isset($request->img)){
-            $img = $request->img->store('public/img/members');
+            $imgPrepare = $request->file("img");
+            $img = time() . "_" . $imgPrepare->getClientOriginalName();
+            $imgPrepare->move('uploads/img', $img);
         }
         $active = 0;
         if($request->active == 1){

@@ -12,7 +12,7 @@
                 <li><a href="{{ route('web.index') }}" class="navLink active active_link">الرئيسية</a>
                 </li>
                 <li><a href="{{ url('/edu-platform/#categories') }}" class="navLink active">التصنيفات</a></li>
-                <li><a href="{{ route('web.subjectsAll') }}" class="navLink active">اخر التحديثات</a></li>
+                {{-- <li><a href="{{ route('technical.support.show') }}" class="navLink active">الدعم الفنى</a></li> --}}
                 <li class="d-none"><input type="color" id="coloc_controller"></li>
                 @if (Auth('member')->check())
                 <li><a href="{{ route('user.profile.form',auth()->guard('member')->user()->id) }}" class="navLink">الملف الشخصى</a></li>
@@ -38,7 +38,7 @@
                 <li><a href="{{ route('web.index') }}" class="navLink active active_link">الرئيسية</a>
                 </li>
                 <li><a href="{{ url('/edu-platform/#categories') }}" class="navLink active">التصنيفات</a></li>
-                <li><a href="{{ route('web.subjectsAll') }}" class="navLink active">اخر التحديثات</a></li>
+                {{-- <li><a href="{{ route('technical.support.show') }}" class="navLink active">الدعم الفنى</a></li> --}}
                 <li class="d-none"><input type="color" id="coloc_controller"></li>
                 @if (Auth('member')->check())
                 <li><a href="{{ route('user.profile.form',auth()->guard('member')->user()->id) }}" class="navLink">الملف الشخصى</a></li>
@@ -55,7 +55,7 @@
         <div class="container">
             <div class="ad_img">
                 <a href="{{ $ads->link }}" target="blank">
-                    <img src="{{ asset('/public/' . Storage::url($ads->img)) }}" alt="">
+                    <img src="{{ asset('/uploads/img/' . $ads->img) }}" alt="">
                 </a>
             </div>
         </div>

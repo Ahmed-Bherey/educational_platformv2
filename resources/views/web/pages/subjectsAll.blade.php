@@ -10,7 +10,7 @@
                             <a href="{{ route('web.subject.details', $subject->id) }}">
                                 <div class="subject__all_box_content position-relative">
                                     <div class="subject__all_img imgBtn">
-                                        <img src="{{ asset('/public/' . Storage::url($subject->img)) }}" alt="">
+                                        <img src="{{ asset('/uploads/img/' . $subject->img) }}" alt="">
                                     </div>
                                     <div class="subject__all_title position-absolute text-end">
                                         <h3 class="title fw-bold text-center">
@@ -36,7 +36,7 @@
                 <div class="container">
                     <div class="ad_img">
                         <a href="{{ $ad2s->link }}" target="blank">
-                            <img src="{{ asset('/public/' . Storage::url($ad2s->img)) }}" alt="">
+                            <img src="{{ asset('/uploads/img/' . $ad2s->img) }}" alt="">
                         </a>
                     </div>
                 </div>

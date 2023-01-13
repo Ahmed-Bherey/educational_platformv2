@@ -122,7 +122,7 @@
                                                             <td>{{ $bookDriveFile->book_drives->name }}</td>
                                                             <td>{{ $bookDriveFile->name }}</td>
                                                             <td>
-                                                                <img src="{{ asset('/public/' . Storage::url($bookDriveFile->img)) }}"
+                                                                <img src="{{ asset('/uploads/img/' . $bookDriveFile->img) }}"
                                                                     id="imgshow" height="50vh">
                                                             </td>
                                                             <td>

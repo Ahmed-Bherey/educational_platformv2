@@ -88,7 +88,7 @@
                                         </div>
                                         {{-- row 1 --}}
                                         <div class="col-md-3">
-                                            <img src="{{ asset('/public/' . Storage::url($examAnsers->img)) }}"
+                                            <img src="{{ asset('/uploads/img/' . $examAnsers->img) }}"
                                                 style="max-width: 100%;" id="imgshow">
                                         </div>
                                     </div>

@@ -624,6 +624,7 @@ footer .footer_box {
 footer .footer_box .footer_box_content {
     background-color: #010246;
     padding: 30px;
+    width: 100%;
     border-top: 5px solid var(--header);
 }
 
@@ -1152,6 +1153,79 @@ footer .copyright a {
 
 /*------------ End Designing Exam Page --------------*/
 
+/*------------ Start Designing Technical Support Page --------------*/
+.technicalSupport{
+    width: 75%;
+    margin: auto;
+    min-height: 70vh;
+    max-height: 70vh;
+    margin-top: 14px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border: 5px dotted var(--main-color);
+    border-bottom: none;
+}
+.technicalSupport .admin .admin_answer{
+    text-align: left;
+    background-color: #e5e7eb;
+}
+.technicalSupport .user .user_answer{
+    text-align: right;
+    background-color: #70dab6;
+}
+.technicalSupport .admin .admin_answer,
+.technicalSupport .user .user_answer{
+    padding: 10px 5px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.form_message{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0;
+    width: 75%;
+    margin: auto;
+}
+.form_message .message_content{
+    width: 100%;
+    height: 8vh;
+}
+.form_message .message_content input{
+    width: 100%;
+    outline: none;
+    border: none;
+    height: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #e1e1dc;
+}
+.form_message .attach,
+.form_message .send{
+    margin: 0 5px;
+    background-color: aquamarine;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 2px solid var(--black);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+
+
+/*------------ Start Designing Technical Support Page --------------*/
 
 /*------------------------------ Start Designing Models -----------------------------*/
 

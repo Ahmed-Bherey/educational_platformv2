@@ -79,7 +79,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-3">
-                                            <img src="{{ asset('/public/' . Storage::url($bookDriveFile->img)) }}"
+                                            <img src="{{ asset('/uploads/img/' . $bookDriveFile->img) }}"
                                                 style="max-width: 100%;" id="imgshow">
                                         </div>
                                     </div>

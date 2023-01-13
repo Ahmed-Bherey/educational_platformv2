@@ -15,11 +15,11 @@
                         <div class="video">
                             @if ($subject->video != null)
                                 <video controls>
-                                    <source src="{{ asset('/public/' . Storage::url($subject->video)) }}" type="video/mp4">
+                                    <source src="{{ asset('/uploads/video/' . $subject->video) }}" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                             @else
-                                <embed src="{{ asset('/public/' . Storage::url($subject->file)) }}" width="70%"
+                                <embed src="{{ asset('/uploads/file/' . $subject->file) }}" width="70%"
                                     height="300px" />
                             @endif
                         </div>
@@ -33,7 +33,7 @@
                                 <div class="container">
                                     <div class="ad_img">
                                         <a href="{{ $ad2s->link }}" target="blank">
-                                            <img src="{{ asset('/public/' . Storage::url($ad2s->img)) }}" alt="">
+                                            <img src="{{ asset('/uploads/img/' . $ad2s->img) }}" alt="">
                                         </a>
                                     </div>
                                 </div>
@@ -69,7 +69,7 @@
                                     <a href="{{ route('web.subject.details', $sub_cat_subject->id) }}">
                                         <div class="subject__all_box_content position-relative">
                                             <div class="subject__all_img imgBtn">
-                                                <img src="{{ asset('/public/' . Storage::url($sub_cat_subject->img)) }}"
+                                                <img src="{{ asset('/uploads/img/' . $sub_cat_subject->img) }}"
                                                     alt="">
                                             </div>
                                             <div class="subject__all_title position-absolute text-end">
@@ -102,7 +102,7 @@
                 <div class="container">
                     <div class="ad_img">
                         <a href="{{ $ad3s->link }}" target="blank">
-                            <img src="{{ asset('/public/' . Storage::url($ad3s->img)) }}" alt="">
+                            <img src="{{ asset('/uploads/img/' . $ad3s->img) }}" alt="">
                         </a>
                     </div>
                 </div>

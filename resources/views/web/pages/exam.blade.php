@@ -14,8 +14,8 @@
             <section class="exam_content">
                 <div class="container">
                     <div class="exam_img mb-5">
-                        <a href="{{ asset('/public/' . Storage::url($exam->img)) }}">
-                            <img src="{{ asset('/public/' . Storage::url($exam->img)) }}" alt="">
+                        <a href="{{ asset('/uploads/img/' . $exam->img) }}">
+                            <img src="{{ asset('/uploads/img/' . $exam->img) }}" alt="">
                         </a>
                     </div>
                     <form action="{{ route('examAnser.store') }}" method="post" enctype="multipart/form-data">
@@ -77,7 +77,7 @@
                                         <img src="{{ asset('public/web/img/default_user.png') }}" alt=""
                                             height="50vh">
                                     @else
-                                        <img src="{{ asset('/public/' . Storage::url($examAnswer->members->img)) }}"
+                                        <img src="{{ asset('/uploads/img/' . $examAnswer->members->img) }}"
                                             alt="" height="50vh">
                                     @endif
                                 </td>

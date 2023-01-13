@@ -148,7 +148,7 @@
                                                             <td>{{ $subject->categories->name }}</td>
                                                             <td>{{ $subject->name }}</td>
                                                             <td>
-                                                                <img src="{{ asset('/public/' . Storage::url($subject->img)) }}"
+                                                                <img src="{{ asset('/uploads/img/' . $subject->img) }}"
                                                                     id="imgshow" height="50vh">
                                                             </td>
                                                             <td>

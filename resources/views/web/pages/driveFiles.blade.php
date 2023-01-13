@@ -34,7 +34,7 @@
                                         </div>
                                         <div class="driveFile_info">
                                             <p>{{ $driveFile->name }}</p>
-                                            <a href="{{ asset('/public/' . Storage::url($driveFile->file)) }}"
+                                            <a href="{{ asset('/uploads/file/' . $driveFile->file) }}"
                                                 class="btn btn-info fw-bold btn_download"
                                                 download="{{ $driveFile->name }}"><i
                                                 class="fa-solid fa-download ms-2"></i> <span>تحميل</span></a>

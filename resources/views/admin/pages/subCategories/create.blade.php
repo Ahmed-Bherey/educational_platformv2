@@ -123,7 +123,7 @@
                                                             <td>{{ $subCategory->categories->name }}</td>
                                                             <td>{{ $subCategory->name }}</td>
                                                             <td>
-                                                                <img src="{{ asset('/public/' . Storage::url($subCategory->img)) }}"
+                                                                <img src="{{ asset('/uploads/img/' . $subCategory->img) }}"
                                                                     id="imgshow" height="50vh">
                                                             </td>
                                                             <td>{{ $subCategory->notes }}</td>

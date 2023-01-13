@@ -126,7 +126,7 @@
                                                         </td>
                                                         <td>
                                                             @isset($ad2s->img)
-                                                                <img src="{{ asset('/public/' . Storage::url($ad2s->img)) }}"
+                                                                <img src="{{ asset('/uploads/img/' . $ad2s->img) }}"
                                                                     id="imgshow" height="50vh">
                                                             @endisset
                                                         </td>

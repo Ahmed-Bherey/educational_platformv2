@@ -45,7 +45,7 @@
                                                             <td>{{ $examAnser->subjects->name }}</td>
                                                             <td>{{ $examAnser->exams->name}}</td>
                                                             <td>
-                                                                <img src="{{ asset('/public/' . Storage::url($examAnser->img)) }}"
+                                                                <img src="{{ asset('/uploads/img/' . $examAnser->img) }}"
                                                                     id="imgshow" height="50vh">
                                                             </td>
                                                             <td>{{$examAnser->notes}}</td>

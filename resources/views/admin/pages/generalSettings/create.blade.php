@@ -135,7 +135,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-3">
-                                            <img src=" @isset($generalSettings->logo) {{ asset('/public/' . Storage::url($generalSettings->logo)) }} @endisset"
+                                            <img src=" @isset($generalSettings->logo) {{ asset('/uploads/img/' . $generalSettings->logo) }} @endisset"
                                                 style="max-width: 100%;" id="imgshow">
                                         </div>
                                     </div>

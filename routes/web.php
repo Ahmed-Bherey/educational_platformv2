@@ -5,6 +5,7 @@ use App\Http\Controllers\Web\HomeController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Web\UserLoginController;
 use App\Http\Controllers\Admin\Auth\LoginController;
+use App\Http\Controllers\web\TechnicalSupportController;
 use App\Http\Controllers\web\UserProfilrController;
 
 /*
@@ -69,5 +70,7 @@ Route::prefix('books-platform')->controller(HomeController::class)->group(functi
         Route::get('/bookDriveFile_content/{id}', 'bookDriveFile_content')->name('web.bookDriveFile.content');
         Route::get('/bookDownload/{id}', 'bookDownload')->name('bookDownload');
 });
+// الدعم الفنى
+Route::get('technicalSuppor', [TechnicalSupportController::class, 'technicalSupportShow'])->name('technical.support.show');
 // Roles
 Route::resource('roles', RoleController::class);

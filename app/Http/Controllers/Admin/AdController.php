@@ -21,7 +21,9 @@ class AdController extends Controller
     {
         $img = null;
         if (isset($request->img)) {
-            $img = $request->img->store('public/img/ads');
+            $imgPrepare = $request->file("img");
+            $img = time() . "_" . $imgPrepare->getClientOriginalName();
+            $imgPrepare->move('uploads/img', $img);
         }
         Ad::updateOrCreate([], [
             'user_id' => Auth::user()->id,

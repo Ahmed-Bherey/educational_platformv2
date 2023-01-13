@@ -67,7 +67,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-3">
-                                            <img src="{{ asset('/public/' . Storage::url($category->img)) }}"
+                                            <img src="{{ asset('/uploads/img/' . $category->img) }}"
                                                 style="max-width: 100%;" id="imgshow">
                                         </div>
                                     </div>

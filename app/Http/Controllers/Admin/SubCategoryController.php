@@ -22,7 +22,9 @@ class SubCategoryController extends Controller
     {
         $img = null;
         if (isset($request->img)) {
-            $img = $request->img->store('public/img/sub_categories');
+            $imgPrepare = $request->file("img");
+            $img = time() . "_" . $imgPrepare->getClientOriginalName();
+            $imgPrepare->move('uploads/img', $img);
         }
         SubCategory::create([
             'user_id' => Auth::user()->id,
@@ -50,7 +52,9 @@ class SubCategoryController extends Controller
         $subCategories = SubCategory::findOrFail($id);
         $img = $subCategories->img;
         if (isset($request->img)) {
-            $img = $request->img->store('public/img/categories');
+            $imgPrepare = $request->file("img");
+            $img = time() . "_" . $imgPrepare->getClientOriginalName();
+            $imgPrepare->move('uploads/img', $img);
         }
         $subCategories->update([
             'user_id' => Auth::user()->id,

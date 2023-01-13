@@ -12,7 +12,7 @@
             <div class="container">
                 <div class="ad_img">
                     <a href="{{ $ad2s->link }}" target="blank">
-                        <img src="{{ asset('/public/' . Storage::url($ad2s->img)) }}" alt="">
+                        <img src="{{ asset('/uploads/img/' . $ad2s->img) }}" alt="">
                     </a>
                 </div>
             </div>
@@ -21,7 +21,7 @@
     <section class="subject_details">
         <div class="container">
             <div class="row">
-                <h3 class="text-center mt-5">للتحميل اضغط <a href="{{ asset('/public/' . Storage::url($bookDownload->file)) }}"
+                <h3 class="text-center mt-5">للتحميل اضغط <a href="{{ asset('/uploads/file/' . $bookDownload->file) }}"
                         download="{{ $bookDownload->name }}">هنا</a></h3>
             </div>
         </div>
@@ -31,7 +31,7 @@
             <div class="container">
                 <div class="ad_img">
                     <a href="{{ $ad3s->link }}" target="blank">
-                        <img src="{{ asset('/public/' . Storage::url($ad3s->img)) }}" alt="">
+                        <img src="{{ asset('/uploads/img/' . $ad3s->img) }}" alt="">
                     </a>
                 </div>
             </div>

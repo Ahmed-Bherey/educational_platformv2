@@ -65,7 +65,7 @@
                                             </label>
                                         </div>
                                         <div class="col-sm-9 form-floating mb-3">
-                                            <img src="@isset($ad3s->img) {{ asset('/public/' . Storage::url($ad3s->img)) }} @endisset"
+                                            <img src="@isset($ad3s->img) {{ asset('/uploads/img/' . $ad3s->img) }} @endisset"
                                                 style="max-width: 100%;" id="imgshow">
                                         </div>
                                     </div>

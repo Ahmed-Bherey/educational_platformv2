@@ -21,7 +21,9 @@ class CategoryController extends Controller
     {
         $img = null;
         if (isset($request->img)) {
-            $img = $request->img->store('public/img/categories');
+            $imgPrepare = $request->file("img");
+            $img = time() . "_" . $imgPrepare->getClientOriginalName();
+            $imgPrepare->move('uploads/img', $img);
         }
         $category = Category::create([
             'user_id' => Auth::user()->id,
@@ -53,7 +55,9 @@ class CategoryController extends Controller
         $category = Category::findOrFail($id);
         $img = $category->img;
         if (isset($request->img)) {
-            $img = $request->img->store('public/img/categories');
+            $imgPrepare = $request->file("img");
+            $img = time() . "_" . $imgPrepare->getClientOriginalName();
+            $imgPrepare->move('uploads/img', $img);
         }
         CategoryTotal::where('category_id', $id)->delete();
         foreach ($request->data['desc'] as $key => $value) {

@@ -17,24 +17,30 @@ class SubjectController extends Controller
         $categories = Category::get();
         $subCategories = SubCategory::get();
         $subjects = Subject::get();
-        return view('admin.pages.subjects.create', compact('subjects','categories','subCategories'));
+        return view('admin.pages.subjects.create', compact('subjects', 'categories', 'subCategories'));
     }
 
     public function store(Request $request)
     {
         $img = null;
         if (isset($request->img)) {
-            $img = $request->img->store('public/img/subjects');
+            $imgPrepare = $request->file("img");
+            $img = time() . "_" . $imgPrepare->getClientOriginalName();
+            $imgPrepare->move('uploads/img', $img);
         }
 
         $file = null;
         if (isset($request->file)) {
-            $file = $request->file->store('public/img/subjects');
+            $filePrepare = $request->file("file");
+            $file = time() . "_" . $filePrepare->getClientOriginalName();
+            $filePrepare->move('uploads/file', $file);
         }
 
         $video = null;
         if (isset($request->video)) {
-            $video = $request->video->store('public/img/subjects');
+            $videoPrepare = $request->file("video");
+            $video = time() . "_" . $videoPrepare->getClientOriginalName();
+            $videoPrepare->move('uploads/video', $video);
         }
         Subject::create([
             'user_id' => Auth::user()->id,
@@ -55,7 +61,7 @@ class SubjectController extends Controller
         $categories = Category::get();
         $subCategories = SubCategory::get();
         $subject = Subject::findOrFail($id);
-        return view('admin.pages.subjects.edit', compact('subject','categories','subCategories'));
+        return view('admin.pages.subjects.edit', compact('subject', 'categories', 'subCategories'));
     }
 
     public function update(Request $request, $id)
@@ -63,17 +69,23 @@ class SubjectController extends Controller
         $subject = Subject::findOrFail($id);
         $img = $subject->img;
         if (isset($request->img)) {
-            $img = $request->img->store('public/img/subjects');
+            $imgPrepare = $request->file("img");
+            $img = time() . "_" . $imgPrepare->getClientOriginalName();
+            $imgPrepare->move('uploads/img', $img);
         }
 
         $file = $subject->file;
         if (isset($request->file)) {
-            $file = $request->file->store('public/img/subjects');
+            $filePrepare = $request->file("file");
+            $file = time() . "_" . $filePrepare->getClientOriginalName();
+            $filePrepare->move('uploads/file', $file);
         }
 
         $video = $subject->video;
         if (isset($request->video)) {
-            $video = $request->video->store('public/img/subjects');
+            $videoPrepare = $request->file("video");
+            $video = time() . "_" . $videoPrepare->getClientOriginalName();
+            $videoPrepare->move('uploads/file', $video);
         }
         $subject->update([
             'user_id' => Auth::user()->id,
@@ -98,7 +110,7 @@ class SubjectController extends Controller
 
     public function categoryAjax($id)
     {
-        $categoryAjax = SubCategory::where('category_id',$id)->get();
+        $categoryAjax = SubCategory::where('category_id', $id)->get();
         return json_encode($categoryAjax);
     }
 }

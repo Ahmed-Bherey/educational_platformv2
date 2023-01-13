@@ -45,7 +45,7 @@
                                                                     <img src="{{ asset('public/web/img/default_user.png') }}"
                                                                         alt="" height="50vh">
                                                                 @else
-                                                                    <img src="{{ asset('/public/' . Storage::url($activeMember->img)) }}"
+                                                                    <img src="{{ asset('/uploads/img/' . $activeMember->img) }}"
                                                                         id="imgshow" height="50vh">
                                                                 @endif
                                                             </td>

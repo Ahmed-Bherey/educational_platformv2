@@ -21,7 +21,9 @@ class Ad3Controller extends Controller
     {
         $img = null;
         if (isset($request->img)) {
-            $img = $request->img->store('public/img/ads');
+            $imgPrepare = $request->file("img");
+            $img = time() . "_" . $imgPrepare->getClientOriginalName();
+            $imgPrepare->move('uploads/img', $img);
         }
         Ad3::updateOrCreate([],[
             'user_id' => Auth::user()->id,

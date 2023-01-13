@@ -19,7 +19,7 @@
                             <a href="{{route('web.subject.details',$sub_subject->id)}}">
                                 <div class="subject__all_box_content position-relative">
                                     <div class="subject__all_img imgBtn">
-                                        <img src="{{ asset('/public/' . Storage::url($sub_subject->img)) }}" alt="">
+                                        <img src="{{ asset('/uploads/img/' . $sub_subject->img) }}" alt="">
                                     </div>
                                     <div class="subject__all_title position-absolute text-end">
                                         <h3 class="title fw-bold">

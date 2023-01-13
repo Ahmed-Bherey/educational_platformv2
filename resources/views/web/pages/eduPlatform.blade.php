@@ -38,7 +38,7 @@
             <div class="container">
                 <div class="ad_img">
                     <a href="{{ $ad2s->link }}" target="blank">
-                        <img src="{{ asset('/public/' . Storage::url($ad2s->img)) }}" alt="">
+                        <img src="{{ asset('/uploads/img/' . $ad2s->img) }}" alt="">
                     </a>
                 </div>
             </div>
@@ -83,7 +83,7 @@
             <div class="container">
                 <div class="ad_img">
                     <a href="{{ $ad3s->link }}" target="blank">
-                        <img src="{{ asset('/public/' . Storage::url($ad3s->img)) }}" alt="">
+                        <img src="{{ asset('/uploads/img/' . $ad3s->img) }}" alt="">
                     </a>
                 </div>
             </div>

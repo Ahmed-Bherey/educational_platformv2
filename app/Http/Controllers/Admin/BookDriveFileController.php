@@ -22,12 +22,16 @@ class BookDriveFileController extends Controller
     {
         $file = null;
         if (isset($request->file)) {
-            $file = $request->file->store('public/img/bookDriveFiles');
+            $filePrepare = $request->file("file");
+            $file = time() . "_" . $filePrepare->getClientOriginalName();
+            $filePrepare->move('uploads/file', $file);
         }
 
         $img = null;
         if (isset($request->img)) {
-            $img = $request->img->store('public/img/bookDriveFiles');
+            $imgPrepare = $request->file("img");
+            $img = time() . "_" . $imgPrepare->getClientOriginalName();
+            $imgPrepare->move('uploads/img', $img);
         }
 
         BookDriveFile::create([
@@ -54,12 +58,16 @@ class BookDriveFileController extends Controller
         $bookDriveFile = BookDriveFile::findOrFail($id);
         $file = $bookDriveFile->file;
         if (isset($request->file)) {
-            $file = $request->file->store('public/img/driveFiles');
+            $filePrepare = $request->file("file");
+            $file = time() . "_" . $filePrepare->getClientOriginalName();
+            $filePrepare->move('uploads/file', $file);
         }
 
         $img = $bookDriveFile->img;
         if (isset($request->img)) {
-            $img = $request->img->store('public/img/driveFiles');
+            $imgPrepare = $request->file("img");
+            $img = time() . "_" . $imgPrepare->getClientOriginalName();
+            $imgPrepare->move('uploads/img', $img);
         }
         $bookDriveFile->update([
             'user_id' => Auth::user()->id,

@@ -28,7 +28,9 @@ class ExamController extends Controller
     {
         $img = null;
         if (isset($request->img)) {
-            $img = $request->img->store('public/img/exams');
+            $imgPrepare = $request->file("img");
+            $img = time() . "_" . $imgPrepare->getClientOriginalName();
+            $imgPrepare->move('uploads/img', $img);
         }
 
         Exam::create([
@@ -58,7 +60,9 @@ class ExamController extends Controller
         $exam = Exam::findOrFail($id);
         $img = $exam->img;
         if (isset($request->img)) {
-            $img = $request->img->store('public/img/exams');
+            $imgPrepare = $request->file("img");
+            $img = time() . "_" . $imgPrepare->getClientOriginalName();
+            $imgPrepare->move('uploads/img', $img);
         }
         $exam->update([
             'user_id' => Auth::user()->id,

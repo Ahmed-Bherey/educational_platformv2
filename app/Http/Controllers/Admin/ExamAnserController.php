@@ -27,7 +27,9 @@ class ExamAnserController extends Controller
     {
         $img = null;
         if (isset($request->img)) {
-            $img = $request->img->store('public/img/examAnsers');
+            $imgPrepare = $request->file("img");
+            $img = time() . "_" . $imgPrepare->getClientOriginalName();
+            $imgPrepare->move('uploads/img', $img);
         }
 
         ExamAnser::create([
@@ -61,7 +63,9 @@ class ExamAnserController extends Controller
         $examAnsers = ExamAnser::findOrFail($id);
         $img = $examAnsers->img;
         if (isset($request->img)) {
-            $img = $request->img->store('public/img/exams');
+            $imgPrepare = $request->file("img");
+            $img = time() . "_" . $imgPrepare->getClientOriginalName();
+            $imgPrepare->move('uploads/img', $img);
         }
         $examAnsers->update([
             'user_id' =>$request->user_id,

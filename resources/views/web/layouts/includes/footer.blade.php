@@ -2,7 +2,7 @@
 <footer class="position-relative">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-6 footer_box">
+            <div class="col-12 col-md-6 footer_box mb-3">
                 <div class="footer_box_content">
                     <h3 class="text-center">منصة الفاتح التعليمية</h3>
                     <p class="notes text-center">
@@ -22,7 +22,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 footer_box d-flex">
+            <div class="col-12 col-md-6 footer_box d-flex mb-3">
                 <div class="footer_box_content">
                     <h3 class="text-center mb-3">منصة الفاتح التعليمية</h3>
                     <p class="notes text-center mb-3">
@@ -47,6 +47,7 @@
                     </div>
                 </div>
             </div>
+            <a href="{{ route('technical.support.show') }}" class="text-center text-info text-decoration-none">الدعم الفنى</a>
         </div>
     </div>
 

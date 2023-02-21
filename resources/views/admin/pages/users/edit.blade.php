@@ -13,7 +13,7 @@
                     <div class="col-sm-12 col-lg-12">
                         <div class="card">
                             <div class="card-header header-bg">
-                                <h3 class="card-title header-title">اضافة مستخدم</h3>
+                                <h3 class="card-title header-title">بيانات المسئول {{$user->name}}</h3>
                             </div>
                             <!-- /.card-header -->
                             <!-- form start -->

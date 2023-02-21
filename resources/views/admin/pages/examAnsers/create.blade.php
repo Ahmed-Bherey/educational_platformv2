@@ -39,23 +39,30 @@
                                                         <tr class="odd">
                                                             <td>{{ $loop->iteration }}</td>
                                                             <td>{{ $examAnser->date }}</td>
-                                                            <td>{{ $examAnser->members->username}}</td>
+                                                            <td>{{ $examAnser->members->username }}</td>
                                                             <td>{{ $examAnser->categories->name }}</td>
                                                             <td>{{ $examAnser->sub_categories->name }}</td>
-                                                            <td>{{ $examAnser->subjects->name }}</td>
-                                                            <td>{{ $examAnser->exams->name}}</td>
+                                                            <td>
+                                                                @isset($examAnser->subjects->name)
+                                                                    {{ $examAnser->subjects->name }}
+                                                                @endisset
+                                                            </td>
+                                                            <td>
+                                                                @isset($examAnser->exams->name)
+                                                                    {{ $examAnser->exams->name }}
+                                                                @endisset
+                                                            </td>
                                                             <td>
                                                                 <img src="{{ asset('/uploads/img/' . $examAnser->img) }}"
                                                                     id="imgshow" height="50vh">
                                                             </td>
-                                                            <td>{{$examAnser->notes}}</td>
+                                                            <td>{{ $examAnser->notes }}</td>
                                                             <td>
                                                                 <a href="{{ route('examAnser.edit', $examAnser->id) }}"
                                                                     type="submit" class="btn bg-secondary"><i
                                                                         class="far fa-edit" aria-hidden="true"></i></a>
                                                                 <a href="{{ route('examAnser.destroy', $examAnser->id) }}"
-                                                                    type="submit"
-                                                                    onclick="return confirm('Are you sure?')"
+                                                                    type="submit" onclick="return confirm('Are you sure?')"
                                                                     class="btn btn-danger"><i
                                                                         class="fas fa-trash-alt"></i></a>
                                                             </td>

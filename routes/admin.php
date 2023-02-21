@@ -17,8 +17,6 @@ use App\Http\Controllers\Admin\ExamController;
 use App\Http\Controllers\Admin\SubCategoryController;
 use App\Http\Controllers\Admin\GeneralSettingController;
 use App\Http\Controllers\Admin\MemberController;
-use App\Models\BookDrive;
-use App\Models\ExamAnser;
 
 Route::middleware('adminAuth')->prefix('admin')->group(function(){
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
@@ -44,7 +42,6 @@ Route::middleware('adminAuth')->prefix('admin')->group(function(){
         Route::get('/active/member','active_members')->name('member.activeMembers');
         Route::get('/nonActive/member','nonActive_members')->name('nonActive_members');
     });
-
     // اضافة تصنيف
     Route::prefix('category')->controller(CategoryController::class)->group(function(){
         Route::get('/', 'create')->name('category.create');

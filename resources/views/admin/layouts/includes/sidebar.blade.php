@@ -13,7 +13,7 @@
                     alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">
+                <a href="{{ route('users.edit', Auth::user()->id) }}" class="d-block">
                     {{ Auth::user()->name }}
                 </a>
             </div>

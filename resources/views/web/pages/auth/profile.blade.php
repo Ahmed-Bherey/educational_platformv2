@@ -73,7 +73,11 @@
                                                             <td>{{ $loop->iteration }}</td>
                                                             <td>{{ $examAnser->categories->name }}</td>
                                                             <td>{{ $examAnser->sub_categories->name }}</td>
-                                                            <td>{{ $examAnser->subjects->name }}</td>
+                                                            <td>
+                                                                @isset($examAnser->subjects->name)
+                                                                    {{ $examAnser->subjects->name }}
+                                                                @endisset
+                                                            </td>
                                                             <td>
                                                                 <a
                                                                     href="{{ asset('/public/' . Storage::url($examAnser->img)) }}">

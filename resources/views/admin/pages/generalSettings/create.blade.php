@@ -53,28 +53,37 @@
                                             <div class="col-md-6 form-floating">
                                                 <input type="text"
                                                     @isset($generalSettings)
-                                                value="{{ $generalSettings->tel1 }}" @endisset
+                                                value="{{ $generalSettings->tel }}" @endisset
                                                     class="form-control" id="name" placeholder="تليفون الشركة"
-                                                    name="tel1">
+                                                    name="tel">
                                                 <label for="tel" class="col-sm-4 col-form-label"> تليفون
                                                     الشركة </label>
                                             </div>
                                             <div class="col-md-6 form-floating">
                                                 <input type="text"
                                                     @isset($generalSettings)
-                                                value="{{ $generalSettings->tel2 }}" @endisset
-                                                    class="form-control" id="name" placeholder="رقم تليفون اخر"
-                                                    name="tel2">
-                                                <label for="tel" class="col-sm-4 col-form-label">رقم تليفون اخر
+                                                value="{{ $generalSettings->zoom }}" @endisset
+                                                    class="form-control" id="zoom" placeholder="حساب زووم"
+                                                    name="zoom">
+                                                <label for="zoom" class="col-sm-4 col-form-label">حساب زووم
                                                 </label>
                                             </div>
                                             <div class="col-md-6 form-floating">
                                                 <input type="text"
                                                     @isset($generalSettings)
-                                                value="{{ $generalSettings->tel3 }}" @endisset
-                                                    class="form-control" id="name" placeholder="رقم تليفون اخر"
-                                                    name="tel3">
-                                                <label for="tel" class="col-sm-4 col-form-label">رقم تليفون اخر
+                                                value="{{ $generalSettings->googleMeet }}" @endisset
+                                                    class="form-control" id="googleMeet" placeholder="حساب جوجل ميتينج"
+                                                    name="googleMeet">
+                                                <label for="googleMeet" class="col-sm-4 col-form-label">حساب جوجل ميتينج
+                                                </label>
+                                            </div>
+                                            <div class="col-md-6 form-floating">
+                                                <input type="text"
+                                                    @isset($generalSettings)
+                                                value="{{ $generalSettings->microsoft }}" @endisset
+                                                    class="form-control" id="microsoft" placeholder="حساب مايكروسوفت"
+                                                    name="microsoft">
+                                                <label for="microsoft" class="col-sm-4 col-form-label">حساب مايكروسوفت
                                                 </label>
                                             </div>
                                             <div class="col-md-6 form-floating">
@@ -93,6 +102,33 @@
                                                     class="form-control" id="twitter" placeholder="حساب تويتر"
                                                     name="twitter">
                                                 <label for="twitter" class="col-sm-4 col-form-label">حساب تويتر
+                                                </label>
+                                            </div>
+                                            <div class="col-md-6 form-floating">
+                                                <input type="text"
+                                                    @isset($generalSettings)
+                                                value="{{ $generalSettings->whatsapp }}" @endisset
+                                                    class="form-control" id="whatsapp" placeholder="واتساب"
+                                                    name="whatsapp">
+                                                <label for="whatsapp" class="col-sm-4 col-form-label">واتساب
+                                                </label>
+                                            </div>
+                                            <div class="col-md-6 form-floating">
+                                                <input type="text"
+                                                    @isset($generalSettings)
+                                                value="{{ $generalSettings->telegram }}" @endisset
+                                                    class="form-control" id="telegram" placeholder="تيليجرام"
+                                                    name="telegram">
+                                                <label for="telegram" class="col-sm-4 col-form-label">تيليجرام
+                                                </label>
+                                            </div>
+                                            <div class="col-md-6 form-floating">
+                                                <input type="text"
+                                                    @isset($generalSettings)
+                                                value="{{ $generalSettings->instgram }}" @endisset
+                                                    class="form-control" id="instgram" placeholder="حساب انستغرام"
+                                                    name="instgram">
+                                                <label for="instgram" class="col-sm-4 col-form-label">حساب انستغرام
                                                 </label>
                                             </div>
                                             <div class="col-md-6 form-floating">

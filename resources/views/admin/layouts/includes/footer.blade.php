@@ -1,5 +1,5 @@
 <footer class="main-footer non-distable text-center">
-    <strong>جميع الحقوق محفوظة لدي <a href="#">Bherey</a> &copy; 2021-2022</strong>
+    <strong>جميع الحقوق محفوظة لدي <a href="#">Ahmed Abdelwahab</a> &copy; 2021-2022</strong>
     <div class="float-right d-none d-sm-inline-block">
     </div>
     <aside class="control-sidebar control-sidebar-dark">

@@ -19,15 +19,16 @@
                                     Your browser does not support the video tag.
                                 </video>
                             @else
-                                <embed src="{{ asset('/uploads/file/' . $subject->file) }}" width="70%"
-                                    height="300px" />
+                                <embed src="{{ asset('/uploads/file/' . $subject->file) }}" width="70%" height="300px" />
                             @endif
                         </div>
                     </div>
                     <div class="explain" data-aos="fade-up">
-                        <p>
-                            {{ $subject->explain }}
-                        </p>
+                        @isset($subject->explain)
+                            <p>
+                                {{ $subject->explain }}
+                            </p>
+                        @endisset
                         @isset($ad2s->img)
                             <section class="ads text-center mb-3 mt-3">
                                 <div class="container">

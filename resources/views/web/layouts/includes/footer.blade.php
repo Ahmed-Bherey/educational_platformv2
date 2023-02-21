@@ -11,13 +11,23 @@
                     </p>
                     <div class="connection_icon d-flex justify-content-center align-items-center">
                         <div>
-                            <p class="zoom">Zoom</p>
+                            <p class="zoom"><a
+                                    href="@isset($generalSetting->zoom)
+                                {{ $generalSetting->zoom }}
+                            @endisset"
+                                    class="text-white text-decoration-none" target="blank">Zoom</a></p>
                         </div>
                         <div>
-                            <p><i class="fa-brands fa-google"></i></p>
+                            <p><a href="@isset($generalSetting->googleMeet)
+                                {{ $generalSetting->googleMeet }}
+                            @endisset"
+                                    class="text-white" target="blank"><i class="fa-brands fa-google"></i></a></p>
                         </div>
                         <div>
-                            <p><i class="fa-brands fa-microsoft"></i></p>
+                            <p><a href="@isset($generalSetting->microsoft)
+                                {{ $generalSetting->microsoft }}
+                            @endisset"
+                                    class="text-white" target="blank"><i class="fa-brands fa-microsoft"></i></a></p>
                         </div>
                     </div>
                 </div>
@@ -30,24 +40,39 @@
                     </p>
                     <div class="connection_icon d-flex justify-content-center align-items-center mb-3">
                         <div>
-                            <p><i class="fa-brands fa-facebook-f"></i></p>
+                            <p><a href="@isset($generalSetting->facebook)
+                                {{ $generalSetting->facebook }}
+                            @endisset"
+                                    class="text-white" target="blank"><i class="fa-brands fa-facebook-f"></i></a></p>
                         </div>
                         <div>
-                            <p><i class="fa-brands fa-twitter"></i></p>
+                            <p><a href="@isset($generalSetting->twitter)
+                                {{ $generalSetting->twitter }}
+                            @endisset"
+                                    class="text-white" target="blank"><i class="fa-brands fa-twitter"></i></a></p>
                         </div>
                         <div>
-                            <p><i class="fa-brands fa-whatsapp"></i></p>
+                            <p><a href="@isset($generalSetting->whatsapp)
+                                {{ $generalSetting->whatsapp }}
+                            @endisset"
+                                    class="text-white" target="blank"><i class="fa-brands fa-whatsapp"></i></a></p>
                         </div>
                         <div>
-                            <p><i class="fa-brands fa-telegram"></i></p>
+                            <p><a href="@isset($generalSetting->telegram)
+                                {{ $generalSetting->telegram }}
+                            @endisset"
+                                    class="text-white" target="blank"><i class="fa-brands fa-telegram"></i></a></p>
                         </div>
                         <div>
-                            <p><i class="fa-brands fa-instagram"></i></p>
+                            <p><a href="@isset($generalSetting->instgram)
+                                {{ $generalSetting->instgram }}
+                            @endisset"
+                                    class="text-white" target="blank"><i class="fa-brands fa-instagram"></i></a></p>
                         </div>
                     </div>
                 </div>
             </div>
-            <a href="{{ route('technical.support.show') }}" class="text-center text-info text-decoration-none">الدعم الفنى</a>
+            {{-- <a href="{{ route('technical.support.show') }}" class="text-center text-info text-decoration-none">الدعم الفنى</a> --}}
         </div>
     </div>
 

@@ -19,11 +19,15 @@ return new class extends Migration
             $table->string('name_ar')->nullable();
             $table->string('name_en')->nullable();
             $table->string('email')->nullable();
-            $table->string('tel1')->nullable();
-            $table->string('tel2')->nullable();
-            $table->string('tel3')->nullable();
+            $table->string('tel')->nullable();
+            $table->string('zoom')->nullable();
+            $table->string('googleMeet')->nullable();
+            $table->string('microsoft')->nullable();
             $table->string('facebook')->nullable();
             $table->string('twitter')->nullable();
+            $table->string('whatsapp')->nullable();
+            $table->string('telegram')->nullable();
+            $table->string('instgram')->nullable();
             $table->string('address')->nullable();
             $table->string('logo')->nullable();
             $table->longText('vision')->nullable();

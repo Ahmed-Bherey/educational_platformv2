@@ -13,7 +13,7 @@ class UserController extends Controller
     //
     public function create()
     {
-        $users = User::get();
+        $users = User::where('id','!=',Auth::user()->id)->get();
         return view('admin.pages.users.create', compact('users'));
     }
 

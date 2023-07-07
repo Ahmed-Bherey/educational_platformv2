@@ -357,6 +357,7 @@ header .nav_content .nav .menu_icon {
 
 .animated {
     animation: up-down 2s ease-in-out infinite alternate-reverse both;
+    -webkit-animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
 
 /*------------ End Designing Banner --------------*/
